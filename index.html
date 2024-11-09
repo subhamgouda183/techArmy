@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#book-categories">Book Catogories</a></li>
+                <li><a href="#ourbooks">Our Books</a></li>
+                <li><a href="#borrow-book">Borrow</a></li>
+                <li><a href="#loginSection">Member Account</a></li>
+                <li><a href="#contact-section">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section class="intro" id="Home">
+            <img src="subham background.jpg" alt="">
+        </section>
+    </header>
+
+    
+        </section>
+        
+        
+    </main>
+    
+    <section id="book-categories">
+        <div class="category-list">
+          <h2>Explore Our Categories</h2>
+          <ul>
+            <li><button class="category-btn" data-category="fiction">Fiction</button></li>
+            <li><button class="category-btn" data-category="non-fiction">Non-fiction</button></li>
+            <li><button class="category-btn" data-category="science">Science</button></li>
+            <li><button class="category-btn" data-category="history">History</button></li>
+          </ul>
+        </div>
+        <div class="books-display">
+          <h3 id="category-title">Please select a category</h3>
+          <div class="book-cards" id="book-list">
+            <!-- Books will appear here based on selected category -->
+          </div>
+        </div>
+    </section>
+      <section class="books-section" id="ourbooks">
+        <h2>Our Books Collection</h2>
+        <div class="books-list">
+            <!-- Book 1 -->
+            <div class="book-card">
+                <img src="content.jpeg" alt="Book 1 Image">
+                <h3>The Great Gatsby</h3>
+                <p class="author">by F. Scott Fitzgerald</p>
+                <p class="description">A novel about the American dream and its disillusionment during the Jazz Age.</p>
+                <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+                <p class="full-description">Published in 1925, this novel is widely considered to be one of the greatest works of American literature, exploring themes of wealth, love, and the American dream.</p>
+            </div>
+            
+            <!-- Book 2 -->
+            <div class="book-card">
+                <img src="content (1).jpeg" alt="Book 2 Image">
+                <h3>1984</h3>
+                <p class="author">by George Orwell</p>
+                <p class="description">A dystopian novel about a totalitarian regime that uses surveillance and propaganda to maintain power.</p>
+                <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+                <p class="full-description">1984 is set in a future society controlled by "Big Brother," where every aspect of life is scrutinized, and personal freedom is restricted.</p>
+            </div>
+            
+            <!-- Book 3 -->
+            <div class="book-card">
+                <img src="WhatsApp Image 2024-11-07 at 18.12.28_80b9c4f5.jpg" alt="Book 3 Image">
+                <h3>To Kill a Mockingbird</h3>
+                <p class="author">by Harper Lee</p>
+                <p class="description">A compelling story of racial injustice in the Deep South during the 1930s.</p>
+                <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+                <p class="full-description">Set in the 1930s, this novel tackles issues of racial inequality, moral growth, and human compassion, narrated through the eyes of a young girl named Scout Finch.</p>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card">
+                <img src="content (2).jpeg" alt="Book 4 Image">
+                <h3>GO Set a Watchman</h3>
+                <p class="author">by Harper Lee</p>
+                <p class="description">A compelling story of a white girl.</p>
+                <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+                <p class="full-description">Dua puluh tahun lalu, Jean Louise menyaksikan Atticus, sang Ayah, membela Negro di pengadilan Maycomb County. Kini, Jean Louise menyadari bahwa Maycomb dan sang Ayah, ternyata tak seperti yang dia ...</p>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-card">
+                <img src="content (3).jpeg" alt="Book 5 Image">
+                <h3>The Great Gatsby </h3>
+                <p class="author">By Francis Scott Fitzgerald</p>
+                <p class="description">The exemplary novel of the Jazz Age.</p>
+                <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+                <p class="full-description">The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time. </p>
+            </div>
+            <!-- Book 6 -->
+            <div class="book-card">
+                <img src="content (4).jpeg" alt="Book 6 Image">
+                <h3>Lord of the Flies</h3>
+                <p class="author">By William Golding</p>
+                <p class="description">The 50th Anniversary Edition of the Lord of the Flies is the volume that every fan of this classic book will have to own!</p>
+                <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+                <p class="full-description">Lord of the Flies remains as provocative today as when it was first published in 1954, igniting passionate debate with its startling, brutal portrait of human nature. Though critically acclaimed, it was largely ignored upon its initial publication.</p>
+            </div>
+        </div>
+    </section>
+    <section id="borrow-book">
+        <h2>Borrow a Book</h2>
+        <form id="borrow-form">
+            <label for="book-select">Choose a Book:</label>
+            <select id="book-select">
+                <option value="book1">The Great Gatsby</option>
+                <option value="book2">To Kill a Mockingbird</option>
+                <option value="book3">1984</option>
+                <option value="book4">Moby Dick</option>
+                <option value="book5">Pride and Prejudice</option>
+            </select>
+
+            <label for="user-name">Your Name:</label>
+            <input type="text" id="user-name" placeholder="Enter your name" required>
+
+            <label for="borrow-date">Borrow Date:</label>
+            <input type="date" id="borrow-date" required>
+
+            <button type="submit">Submit Borrow Request</button>
+        </form>
+        <div id="response-message"></div>
+    </section>
+    
+
+    <!-- Login Section -->
+    <header>
+        <h1>Member Account Login</h1>
+    </header>
+    <section id="loginSection" class="form-section">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <header>
+        <h1>New Member Registration</h1>
+    </header>
+
+    <!-- Register Section -->
+    <section id="registerSection" class="form-section" style="">
+        <h2>Create a New Account</h2>
+        <form id="registerForm">
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" required>
+
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required>
+
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profileSection" class="form-section" style="display: none;">
+        <h2>Your Profile</h2>
+        <p>Welcome, <span id="userNameDisplay"></span></p>
+        <p>Email: <span id="userEmailDisplay"></span></p>
+        <button id="editProfileBtn">Edit Profile</button>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <section id="contact-section">
+        <h2>We'd love to hear from you!</h2>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" placeholder="Enter your message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="response-message"></div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>City Library</h2>
+                <p>Your gateway to a world of knowledge!</p>
+            </div>
+            <div class="footer-middle">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#ourbooks">Services</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Contact Us</h3>
+                <p>Email: info@citylibrary.com</p>
+                <p>Phone:06822-6831388</p>
+                <p>Address:Near Khalikote Univercity Ground,Berhampur City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 City Library. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
